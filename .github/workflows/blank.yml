@@ -19,11 +19,5 @@ jobs:
       run: echo Hello, world!
     - name: Run a multi-line script
       run: |
-        npm i playwright
-        echo Launch chromium
-        node -e "require('playwright').chromium.launch().then(b => b.close())" 
-        echo Launch webkit
-        node -e "require('playwright').webkit.launch().then(b => b.close())" 
-        echo Launch firefox
-        node -e "require('playwright').firefox.launch().then(b => b.close())" 
+        .\test.bat
         echo done
