@@ -293,6 +293,9 @@ class TestPass {
   async _terminate(result, message, error) {
     if (this._termination)
       return false;
+    console.error('shutting down');
+    // give some extra time for dumpio
+    await new Promise(x => setTimeout(x, 1500));
     if (error && error.stack)
       await this._runner._sourceMapSupport.rewriteStackTraceWithSourceMaps(error);
     this._termination = {result, message, error};
