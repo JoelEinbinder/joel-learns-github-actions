@@ -2,7 +2,7 @@
 setLocal EnableDelayedExpansion
 set WKPATH=%cd%\bin\MiniBrowser.exe
 set DUMPIO=true
-set DEBUG=*
 cd playwright
 call npm i
+set DEBUG=*
 call npm run wtest
